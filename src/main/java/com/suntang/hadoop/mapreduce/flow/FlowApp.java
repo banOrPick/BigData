@@ -66,6 +66,9 @@ public class FlowApp {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Flowbean.class);
 
+        //设置分区
+        job.setPartitionerClass(FlowPartitioner.class);
+        job.setNumReduceTasks(5);
         // 如果输出目录已经存在，则必须先删除，否则重复运行程序时会抛出异常
         FileSystem fileSystem = FileSystem.get(new URI(HDFS_URL), configuration, HADOOP_USER_NAME);
         Path outputPath = new Path("/wordcount/flow/flowApp");
