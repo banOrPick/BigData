@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.suntang</groupId>
-    <artifactId>hadooptest</artifactId>
+    <artifactId>bigdata</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hadooptest</name>
+    <name>BigData</name>
     <description>hadoop test</description>
 
     <properties>
